@@ -10,7 +10,8 @@ main_str = """
 d = get_count_char(main_str)
 
 def percentage_char(d):
-    d1 = {char: round(d[char]/len(main_str)*100, 2) for char in d}
-    return (d1)
+    s_dict = sum(d.values())
+    dic = {char: round(d[char]/s_dict, 2) for char in d}
+    return dic
 
 print(get_count_char(main_str))
